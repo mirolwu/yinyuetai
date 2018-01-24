@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	margin: 0;
+}
+header {
+	height: 2rem;
+	line-height: 2rem;
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+}
+.wrap {
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+}
+.scroll {
+	position: relative;
+}
+.pics {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style: none;
+}
+.pics li {
+	float: left;
+	width: 7rem;
+	min-height: 7rem;
+	margin: .5rem;
+	border-radius: 0.25rem;
+	background: url("../img/loadingImg.gif") no-repeat center center #ccc;
+}
+.pics canvas {
+	display: block;
+	width: 7rem;
+	border-radius: 0.25rem;
+	opacity: 0;
+	transition: .3s opacity;
+}
+footer {
+	position: absolute;
+	left: 0;
+	bottom: -80px;
+	width: 100%;
+	height: 80px;
+	font: .7rem/80px "微软雅黑";
+	text-align: center;
+	transition: .3s opacity;
+}
+.bar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: purple;
+	width: 0.15rem;
+	height: 0;
+	border-radius: 0.075rem;
+	opacity: 0;
+	transition: .3s opacity;
+}
+.bigImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	background-color: #ddd;
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	opacity: 0;
+	transition: .5s -webkit-transform, .5s opacity;
+	z-index: 99;
+}
+.close {
+	display: inline-block;
+	float: right;
+	margin-right: 0.25rem;
+	text-decoration: none;
+	color: #fff;
+}
+.canvas {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6rem 0 0 -6rem;
+	width: 12rem;
+	height: 12rem;
+	background-color: #fff;
+}
